@@ -1,0 +1,28 @@
+<h1>Welcome to the pizza carts</h1>
+<h2>Ordering a pizza is simple.Plz select one of the id number from the list and enter the quantity</h2>
+
+<div class="formWrapper">
+        <form id="cartCreate" action="/api/cart" method="POST">
+        
+          
+            <div class="formError"></div>
+            <div class="formSuccess">New item added to cart</div>
+   
+            <div class="inputWrapper">
+                    <div class="inputLabel">Pizza Id</div>
+                    <input type="text" name="pizzaId" placeholder="5 numbers (12345)"/>
+        
+                </div>
+                <div class="inputWrapper">
+                        <div class="inputLabel">Quantity</div>
+                        <input type="text" name="quantity" placeholder="1-100"/>
+                        
+                    </div>
+              <div class="inputWrapper ctaWrapper">
+                      <div class="inputWrapper ctaWrapper">
+                              <button type="submit" class="cta blue">Get Started</button>
+                            </div> 
+              </div>
+             
+        </form>
+      </div>

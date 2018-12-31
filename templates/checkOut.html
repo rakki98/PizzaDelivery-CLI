@@ -1,0 +1,68 @@
+<h1>CheckOut</h1>
+<div class="formWrapper">
+  <form id="checkOut" action="/api/order"  method="POST">
+    <div class="formError"></div>
+    <div class="formSuccess">Successfully paid</div>
+        <div class="formWrapper">
+                <table id="checksListTable">
+                  <tr>
+                    <th>Pizza Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                  
+                   </tr>
+                   </table>
+                   <div class="inputWrapper">
+                        <div class="inputLabel">Total Amount </div>
+                        <input  type="number" class="amount" name="displayTitle" id="amount"  />
+                      </div>     
+                </div>
+                <div class="inputWrapper">
+                        <div class="inputLabel">Payment Brand</div>
+                        <input  type="text" name="paymentBrand" placeholder="visa or  mastercard"  />
+                      </div>   
+                      
+                      <div class="inputWrapper">
+                        <div class="inputLabel"></div>
+                        <button type="submit" class="cta green">Check out</button>
+                      </div>  
+                    </form>        
+            <hr/>
+            <p User Details></p>
+            <div class="formWrapper" id="userDetails">
+                    
+                            <div class="inputWrapper">
+                                    <div class="inputLabel">Email</div>
+                                    <input class="disabled displayEmail" type="text" name="email" disabled />
+                                  </div>
+                                  <div class="inputWrapper">
+                                    <div class="inputLabel">Name</div>
+                                    <input class="name" type="text" name="name" placeholder="John" disabled/>
+                                  </div>
+                                  <div class="inputWrapper">
+                                    <div class="inputLabel">Address</div>
+                                    <input class="address" type="text" name="address" placeholder="Smith"  disabled/>
+                                  </div>
+                                  <div class="inputWrapper">
+                                        <div class="inputLabel">PinCOde</div>
+                                        <input class="pinCode" type="text" name="pinCode" placeholder="Smith" disabled />
+                                      </div>
+
+                                      <div class="inputWrapper ctaWrapper">
+                                        <a  class="cta green" href="account/edit">Edit Account Details</a>
+                                      </div>
+                                    
+
+                   
+                   
+            </div>
+            
+
+               
+                   
+                        
+                
+                
+</div>
+

@@ -1,0 +1,45 @@
+{"cartObjects":[{"id":"12543","title":"cheese","price":30,"quantity":8,"totalPrice":240},{"id":"12345","title":"chesse","price":50,"quantity":8,"totalPrice":400},{"id":"12346","title":"chesse","price":50,"quantity":8,"totalPrice":400}]}
+
+
+//Load the check out page
+app.loadCheckOutPage=function(){
+    var email = typeof(app.config.sessionToken.email) == 'string' ? app.config.sessionToken.email : false;
+   if(email){
+     // Fetch the user data
+     var queryStringObject = {
+       'email' : email
+     };
+     app.client.request(undefined,'api/cart','GET',queryStringObject,undefined,function(statusCode,responsePayload){
+       if(statusCode == 200){
+  
+         // Determine how many checks the user has
+         var allPizza = typeof(responsePayload.cartObjects) == 'object' && responsePayload.cartObjects instanceof Array && responsePayload.cartObjects.length > 0 ? responsePayload.cartObjects : [];
+        
+         if(allPizza.length > 0){
+  
+           // Show each created check as a new row in the table
+           allPizza.forEach(function(cartData){
+             // Get the data for the check
+            
+                
+                 var table = document.getElementById("checksListTable");
+                 var tr = table.insertRow(-1);
+                 tr.classList.add('checkRow');
+                 var td0 = tr.insertCell(0);
+                 var td1 = tr.insertCell(1);
+                 var td2 = tr.insertCell(2);
+                 var td3=tr.insertCell(3)
+                 var td4=tr.insertCell(4)
+                 td0.innerHTML = cartData.id;
+                 td1.innerHTML = cartData.title;
+                 td2.innerHTML = cartData.price;
+                 td3.innerHTML=cartData.quantity;
+                 td4.innerHTML = '<a href="/cart/edit?id='+cartData.id+'">Edit / Delete</a>';
+                 var totalPrize=document.getElementById('amount')
+                 totalPrize.innerHTML(cartData.totalPrize)
+              
+           
+           });
+  
+   
+  }
