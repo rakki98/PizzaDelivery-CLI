@@ -14,7 +14,11 @@ CLI MANUAL
 
 5 more user info -- {userId}- Show details of specific user,
 
+ex:more user info -- rakshugs@gmail.com
+
 6 list user cart  --{userId}-Lists all the cart details of the particular user,
+
+ex:list user cart -- rakshugs@gmail.com
 
 7 recent orders-List of recent orders done by users with in 24 hours,
 
@@ -23,6 +27,8 @@ CLI MANUAL
 9 list menu-Displays the menu items,
 
 10 exit-Kill th cli
+
+
  
 
 
