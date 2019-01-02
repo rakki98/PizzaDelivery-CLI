@@ -20,9 +20,9 @@ ex:more user info -- rakshugs@gmail.com
 
 ex:list user cart -- rakshugs@gmail.com
 
-7 recent orders-List of recent orders done by users with in 24 hours,
+7 recent orders-List of recent orders done by users in the same day or 24 hours,
 
-8 recent login-List the users who have logged in within 24 hours,
+8 recent login-List the users who have logged in the same day or 24 hours ,
 
 9 list menu-Displays the menu items,
 
